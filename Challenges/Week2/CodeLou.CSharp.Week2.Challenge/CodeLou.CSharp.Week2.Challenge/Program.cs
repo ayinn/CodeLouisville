@@ -16,7 +16,7 @@ namespace CodeLou.CSharp.Week2.Challenge
             // Hint: In Visual Studio, you can build the project by selecting "Build Solution" from the
             //       build menu, or by pressing <Ctrl>+<Shift>+B.
             Console.WriteLine("Welcome to the Code Louisville C# week 2 code challenge!");
-            Console.WriteLine("Press <Enter> to begin...")
+            Console.WriteLine("Press <Enter> to begin...");
             Console.ReadLine();
 
             Console.WriteLine("This is the launch application for the first human mission to Mars.");
