@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace CodeLou.CSharp.Week2.Challenge
 {
@@ -27,6 +28,8 @@ namespace CodeLou.CSharp.Week2.Challenge
             // Hint: You should use another method of the Console class and store the output into a
             //       variable to use later.
 
+            //this line will get the user input
+            string userInput = Console.ReadLine();
 
             // Task 4:
             // Write a condition to test whether the number that they entered is less than or equal to zero.
@@ -35,6 +38,8 @@ namespace CodeLou.CSharp.Week2.Challenge
             // Hint: The input that you captured is currently a string type. You will have to "parse" it
             //       as a different type in order to pass it to the IsLessThanOrEqualToZero function.
 
+            //convert the user's input from a string
+            int countDown = int.Parse(userInput);
 
             // Task 5:
             // Add an "else" block to the condition from Task 4. This should be run in the case that the
@@ -44,6 +49,20 @@ namespace CodeLou.CSharp.Week2.Challenge
             //       "for". You can choose whichever you'd like to solve the task. The Microsoft
             //       Developer Network (MSDN) website contains all of the documentation for C#. If you want
             //       to learn more about loops, visit https://msdn.microsoft.com/en-us/library/32dbftby.aspx.
+
+            if (IsLessThanOrEqualToZero(countDown))
+            {
+                Console.WriteLine("Number must be greater than zero.");
+            }
+            else
+            {
+                for (int i = countDown; i >= 0; i--)
+                {
+                    Console.WriteLine(i);
+                    Thread.Sleep(1000);
+                }
+                Console.WriteLine("LIFTOFF!");
+            }
 
             Console.WriteLine("Press <Enter> to exit...");
             Console.ReadLine();
