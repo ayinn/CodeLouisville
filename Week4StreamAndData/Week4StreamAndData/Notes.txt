@@ -1,0 +1,31 @@
+﻿
+Special string characters \ backslash
+
+Parse
+C# Parse VS TryParse VS Convert
+
+Reference VS Value Types
+
+Collections (Generics)
+List<Object> vs Object[]
+
+Where VS Builds and stores the EXE
+
+DataTypes
+int, double, decimal
+DateTime
+
+Enums
+
+File IO
+
+Open File
+Append to file
+
+Split Method
+
+
+Serialization
+JSON vs XML
+
+WebClient vs HttpClient
