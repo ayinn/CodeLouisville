@@ -1,31 +1,55 @@
 ﻿
 Special string characters \ backslash
 
-Parse
-C# Parse VS TryParse VS Convert
-
-Reference VS Value Types
-
 Collections (Generics)
 List<Object> vs Object[]
 
-Where VS Builds and stores the EXE
+Where VS Builds and stores the EXE -- how to include a file in the bin dir
 
 DataTypes
 int, double, decimal
 DateTime
 
-Enums
+Parse
+C# Parse VS TryParse VS Convert
+
+Reference VS Value Types
+
 
 File IO
-
-Open File
+Open File -- Using vs TryCatch vs GarbageCollection
 Append to file
 
 Split Method
 
+FileHelpers
+Enums
 
 Serialization
 JSON vs XML
+
+// Create a new XmlSerializer instance with the type of the test class
+XmlSerializer SerializerObj = new XmlSerializer(typeof(TestClass));
+ 
+// Create a new file stream to write the serialized object to a file
+TextWriter WriteFileStream = new StreamWriter(@"C:\test.xml");
+SerializerObj.Serialize(WriteFileStream, TestObj);
+ 
+// Cleanup
+WriteFileStream.Close();
+
+
+// Create a new file stream for reading the XML file
+FileStream ReadFileStream = new FileStream(@"C:\test.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+ 
+// Load the object saved above by using the Deserialize function
+TestClass LoadedObj = (TestClass)SerializerObj.Deserialize(ReadFileStream);
+ 
+// Cleanup
+ReadFileStream.Close();
+ 
+
+
+
 
 WebClient vs HttpClient
